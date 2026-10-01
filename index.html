@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrightPath Academy | Classes for Grades 1–12, Exam Prep &amp; Skills</title>
+<meta name="description" content="BrightPath Academy offers small-group classes for grades 1–12, exam preparation, English and computer courses. Apply for admission online.">
+<meta property="og:title" content="BrightPath Academy | Learn. Grow. Succeed.">
+<meta property="og:description" content="Expert teachers, small classes and proven results. Admissions open.">
+<meta name="theme-color" content="#3730a3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233730a3'/%3E%3Cpath d='M32 14 8 26l24 12 24-12zM18 32v10c0 4 7 8 14 8s14-4 14-8V32l-14 7z' fill='%23facc15'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#3730a3;--brand-2:#4f46e5;--brand-soft:#eef2ff;--sun:#facc15;--sun-dark:#ca8a04;
+  --ink:#1e1b4b;--muted:#5b5f7a;--line:#e5e7f0;--bg:#fafaff;--card:#fff;
+  --radius:22px;--shadow:0 24px 50px -28px rgba(30,27,75,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--sun-dark);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 14px 26px -14px var(--brand)}
+.btn-primary:hover{background:var(--brand-2)}
+.btn-sun{background:var(--sun);color:var(--ink);box-shadow:0 14px 26px -14px var(--sun-dark)}
+.btn-ghost{border-color:var(--line);background:#fff}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+
+/* Notice bar + header */
+.notice{background:var(--ink);color:#e0e7ff;font-size:14px;text-align:center;padding:9px 16px}
+.notice b{color:var(--sun)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;line-height:1.1}
+.logo small{display:block;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:.08em}
+.logo-mark{width:42px;height:42px;border-radius:12px;background:var(--brand);display:grid;place-items:center;flex:none}
+.menu{display:flex;gap:30px;list-style:none;font-weight:500;color:var(--muted)}
+.menu a:hover{color:var(--brand)}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.2s}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:64px 0 96px;background:linear-gradient(180deg,var(--brand-soft),var(--bg))}
+.hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#fef9c3;right:-140px;top:-160px;z-index:0}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;color:var(--brand)}
+h1{isolation:isolate;font-size:clamp(38px,5.2vw,60px);line-height:1.08;letter-spacing:-.02em;margin:20px 0 18px;font-weight:800}
+h1 .hl{position:relative;white-space:nowrap}
+h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.32em;background:var(--sun);z-index:-1;border-radius:4px}
+.lead{font-size:18px;color:var(--muted);max-width:520px}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.proof{display:flex;align-items:center;gap:14px;margin-top:36px}
+.faces{display:flex}
+.faces i{width:42px;height:42px;border-radius:50%;border:3px solid #fff;margin-left:-10px;display:grid;place-items:center;font-style:normal;font-weight:700;color:#fff;font-size:14px}
+.faces i:first-child{margin-left:0}
+.proof b{display:block}
+.proof small{color:var(--muted)}
+.hero-art{position:relative;justify-self:end;width:100%;max-width:470px;aspect-ratio:1/1.05}
+.board{position:absolute;inset:6% 4% 14% 4%;background:var(--brand);border-radius:32px;box-shadow:var(--shadow);overflow:hidden;padding:30px;color:#fff}
+.board .eq{font-size:26px;font-weight:700;opacity:.95}
+.board .eq span{color:var(--sun)}
+.board svg{position:absolute;right:-10px;bottom:-10px;width:72%}
+.tag{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-weight:600;font-size:14px}
+.tag small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+.tag .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:20px}
+.t1{left:-6%;bottom:6%}.t2{right:-4%;top:0}
+
+/* Sections */
+section{padding:90px 0}
+.head{text-align:center;max-width:640px;margin:0 auto 52px}
+.eyebrow{display:inline-block;color:var(--brand);font-weight:700;letter-spacing:.14em;font-size:13px;text-transform:uppercase}
+h2{font-size:clamp(28px,3.4vw,40px);line-height:1.2;letter-spacing:-.01em;margin:8px 0 12px;font-weight:800}
+.head p{color:var(--muted);font-size:17px}
+
+/* Programs */
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prog{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.prog:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.prog .top{height:130px;display:grid;place-items:center;font-size:56px;position:relative}
+.prog .badge{position:absolute;top:14px;left:14px;background:#fff;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;color:var(--brand)}
+.prog .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prog h3{font-size:19px}
+.prog p{color:var(--muted);font-size:14.5px}
+.meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:auto;padding-top:10px}
+.prog .foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:14px 22px}
+.fee{font-weight:800;font-size:18px}.fee small{font-weight:500;color:var(--muted);font-size:13px}
+.prog .foot a{font-weight:600;color:var(--brand);font-size:14px}
+
+/* Results band */
+.band{background:var(--brand);color:#fff;border-radius:32px;padding:46px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.band b{display:block;font-size:42px;font-weight:800;color:var(--sun);line-height:1.1}
+.band span{color:#c7d2fe}
+
+/* Why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.feat .ic{width:52px;height:52px;border-radius:16px;background:var(--brand-soft);display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+.feat h3{font-size:17px;margin-bottom:6px}
+.feat p{color:var(--muted);font-size:14.5px}
+
+/* Teachers */
+.teachers{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.teacher{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 20px;text-align:center}
+.av{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff}
+.teacher h3{font-size:17px}
+.teacher p{color:var(--brand);font-weight:600;font-size:14px}
+.teacher small{color:var(--muted)}
+
+/* Testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;position:relative}
+.quote::before{content:"“";position:absolute;top:6px;right:22px;font-size:80px;line-height:1;color:var(--brand-soft);font-weight:800}
+.stars{color:#f59e0b;letter-spacing:2px}
+.quote p{margin:12px 0 18px;color:#3f4363}
+.who{display:flex;gap:12px;align-items:center}
+.who i{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;color:#fff}
+.who small{display:block;color:var(--muted)}
+
+/* Admission */
+.admit{background:linear-gradient(135deg,var(--ink),var(--brand));color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.admit::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(250,204,21,.15);left:-80px;bottom:-120px}
+.admit > *{position:relative;z-index:1}
+.admit h2{color:#fff}
+.admit .lead{color:#c7d2fe}
+.steps{list-style:none;margin-top:26px;display:grid;gap:14px}
+.steps li{display:flex;gap:12px;align-items:center;color:#e0e7ff}
+.steps b{flex:none;width:32px;height:32px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;font-size:14px}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-weight:600;font-size:14px}
+input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);transition:border-color .15s,background .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);background:#fff}
+textarea{resize:vertical;min-height:84px}
+form .btn{grid-column:1/-1;padding:16px}
+.form-note{grid-column:1/-1;font-size:13px;color:var(--muted);text-align:center}
+
+/* FAQ */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:14px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 24px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1;color:var(--brand);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px}
+
+/* Contact + footer */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.contact .feat{text-align:center}
+.contact .feat .ic{margin-inline:auto}
+footer{background:var(--ink);color:#a5b4fc;padding:56px 0 28px;margin-top:20px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer .logo{color:#fff;margin-bottom:12px}
+footer .logo small{color:#a5b4fc}
+footer h4{color:#fff;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:#fff}
+.copy{border-top:1px solid #312e81;margin-top:40px;padding-top:22px;font-size:14px;text-align:center}
+
+.wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#22c55e;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(34,197,94,.8);z-index:60;transition:transform .15s}
+.wa:hover{transform:scale(1.08)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+@media (max-width:980px){
+  .programs,.quotes{grid-template-columns:1fr 1fr}
+  .why,.teachers{grid-template-columns:1fr 1fr}
+  .admit{grid-template-columns:1fr}
+  .band{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .menu,.nav-cta .btn{display:none}
+  .burger{display:block}
+  .menu.open{display:flex;flex-direction:column;gap:0;position:absolute;top:74px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:8px 20px 16px}
+  .menu.open a{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+  .burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded=true] span:nth-child(2){opacity:0}
+  .burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .hero{padding:36px 0 70px}
+  .hero::before{width:260px;height:260px;right:-120px;top:-110px}
+  .notice{font-size:13px}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero-art{justify-self:center;max-width:360px}
+  .hero-actions .btn{flex:1 1 auto}
+  section{padding:68px 0}
+  .programs,.quotes,.contact{grid-template-columns:1fr}
+  .band{padding:30px 18px;border-radius:24px}
+  .band b{font-size:34px}
+  .admit{padding:30px 20px;border-radius:24px}
+  form{grid-template-columns:1fr;padding:22px}
+  .t1{left:0}.t2{right:0}
+}
+@media (max-width:420px){.feat{padding:20px}.teacher{padding:20px 12px}.av{width:76px;height:76px;font-size:24px}.fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="notice">🎓 <b>Admissions open</b> for the new session. Limited seats in every class.</div>
+
+<header><div class="wrap"><nav aria-label="Main">
+  <a href="#" class="logo" aria-label="BrightPath Academy home">
+    <span class="logo-mark"><svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 14 8 26l24 12 24-12zM18 32v10c0 4 7 8 14 8s14-4 14-8V32l-14 7z" fill="#facc15"/></svg></span>
+    <span>BrightPath<small>ACADEMY</small></span>
+  </a>
+  <ul class="menu" id="menu">
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#why">Why us</a></li>
+    <li><a href="#teachers">Teachers</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="#admission" class="btn btn-primary">Apply now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav></div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="pill">⭐ Rated 4.9 by 1,200+ parents</span>
+    <h1>Where every student <span class="hl">learns</span> and grows</h1>
+    <p class="lead">Small classes, caring teachers and a proven study plan for grades 1–12, exam preparation, English and computer skills.</p>
+    <div class="hero-actions">
+      <a href="#admission" class="btn btn-sun">Apply for admission →</a>
+      <a href="#programs" class="btn btn-ghost">View programs</a>
+    </div>
+    <div class="proof">
+      <div class="faces" aria-hidden="true"><i style="background:#4f46e5">A</i><i style="background:#f59e0b">S</i><i style="background:#10b981">Z</i><i style="background:#ec4899">M</i></div>
+      <div><b>3,000+ students</b><small>have studied with us</small></div>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="board">
+      <div class="eq">a² + b² = <span>c²</span></div>
+      <div class="eq" style="margin-top:10px;font-size:20px;opacity:.75">H₂O · E = mc²</div>
+      <svg viewBox="0 0 300 260">
+        <rect x="40" y="150" width="200" height="22" rx="6" fill="#facc15"/>
+        <rect x="52" y="128" width="176" height="22" rx="6" fill="#f472b6"/>
+        <rect x="64" y="106" width="152" height="22" rx="6" fill="#34d399"/>
+        <path d="M96 106V70h44l-6 10 6 10h-34v16" fill="#fff"/>
+        <circle cx="236" cy="70" r="26" fill="#fde68a"/>
+        <path d="M228 66h16M236 58v16" stroke="#ca8a04" stroke-width="4" stroke-linecap="round"/>
+        <rect x="30" y="172" width="240" height="14" rx="7" fill="#1e1b4b" opacity=".35"/>
+      </svg>
+    </div>
+    <div class="tag t2"><span class="ic" style="background:#fef9c3">🏆</span><div>98% pass rate<small>Board exams 2025</small></div></div>
+    <div class="tag t1"><span class="ic" style="background:#dcfce7">📚</span><div>Class starts 4:00 PM<small>Grade 9 · Physics</small></div></div>
+  </div>
+</div></section>
+
+<section id="programs"><div class="wrap">
+  <div class="head reveal">
+    <span class="eyebrow">Our programs</span>
+    <h2>Find the right class for your child</h2>
+    <p>Clear lessons, regular tests and progress reports for parents every month.</p>
+  </div>
+  <div class="programs">
+    <article class="prog reveal"><div class="top" style="background:#e0e7ff"><span class="badge">Grades 1–5</span>✏️</div>
+      <div class="body"><h3>Primary Classes</h3><p>Strong basics in Maths, English and Science with fun, activity-based learning.</p>
+      <div class="meta"><span>🕒 1.5 hrs/day</span><span>👥 12 per class</span></div></div>
+      <div class="foot"><span class="fee">$30<small>/month</small></span><a href="#admission">Enroll →</a></div></article>
+    <article class="prog reveal"><div class="top" style="background:#fef9c3"><span class="badge">Grades 6–8</span>🔬</div>
+      <div class="body"><h3>Middle School</h3><p>Concept-based teaching in all main subjects, with weekly tests and homework help.</p>
+      <div class="meta"><span>🕒 2 hrs/day</span><span>👥 15 per class</span></div></div>
+      <div class="foot"><span class="fee">$40<small>/month</small></span><a href="#admission">Enroll →</a></div></article>
+    <article class="prog reveal"><div class="top" style="background:#dcfce7"><span class="badge">Grades 9–12</span>🎯</div>
+      <div class="body"><h3>Board Exam Prep</h3><p>Full syllabus, past papers and mock exams for top board and entrance results.</p>
+      <div class="meta"><span>🕒 3 hrs/day</span><span>👥 15 per class</span></div></div>
+      <div class="foot"><span class="fee">$55<small>/month</small></span><a href="#admission">Enroll →</a></div></article>
+    <article class="prog reveal"><div class="top" style="background:#fce7f3"><span class="badge">All ages</span>🗣️</div>
+      <div class="body"><h3>Spoken English</h3><p>Speak with confidence: grammar, vocabulary, presentations and interview practice.</p>
+      <div class="meta"><span>🕒 3 months</span><span>👥 10 per class</span></div></div>
+      <div class="foot"><span class="fee">$25<small>/month</small></span><a href="#admission">Enroll →</a></div></article>
+    <article class="prog reveal"><div class="top" style="background:#e0f2fe"><span class="badge">Ages 10+</span>💻</div>
+      <div class="body"><h3>Computer &amp; Coding</h3><p>MS Office, typing, internet safety and beginner coding with hands-on projects.</p>
+      <div class="meta"><span>🕒 3 months</span><span>👥 12 per class</span></div></div>
+      <div class="foot"><span class="fee">$30<small>/month</small></span><a href="#admission">Enroll →</a></div></article>
+    <article class="prog reveal"><div class="top" style="background:#ede9fe"><span class="badge">Grades 1–12</span>🏠</div>
+      <div class="body"><h3>Online Tuition</h3><p>Live one-to-one or small-group classes from home, with recorded lessons.</p>
+      <div class="meta"><span>🕒 Flexible</span><span>👥 1–5 students</span></div></div>
+      <div class="foot"><span class="fee">$45<small>/month</small></span><a href="#admission">Enroll →</a></div></article>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="band reveal">
+    <div><b>3,000+</b><span>Students taught</span></div>
+    <div><b>98%</b><span>Exam pass rate</span></div>
+    <div><b>40+</b><span>Qualified teachers</span></div>
+    <div><b>12</b><span>Years of excellence</span></div>
+  </div>
+</div></section>
+
+<section id="why" style="padding-top:20px"><div class="wrap">
+  <div class="head reveal">
+    <span class="eyebrow">Why BrightPath</span>
+    <h2>Learning that really works</h2>
+    <p>We focus on understanding, not memorising, so students do well in exams and in life.</p>
+  </div>
+  <div class="why">
+    <div class="feat reveal"><div class="ic">👥</div><h3>Small classes</h3><p>Every student gets attention and can ask questions freely.</p></div>
+    <div class="feat reveal"><div class="ic">📊</div><h3>Monthly reports</h3><p>Parents get test results and teacher feedback every month.</p></div>
+    <div class="feat reveal"><div class="ic">📝</div><h3>Weekly tests</h3><p>Regular practice to find weak areas early and fix them.</p></div>
+    <div class="feat reveal"><div class="ic">🛡️</div><h3>Safe campus</h3><p>CCTV, a caring staff and a calm place to study.</p></div>
+  </div>
+</div></section>
+
+<section id="teachers" style="background:#fff"><div class="wrap">
+  <div class="head reveal">
+    <span class="eyebrow">Our teachers</span>
+    <h2>Learn from the best</h2>
+    <p>Experienced, qualified and friendly teachers who love helping students succeed.</p>
+  </div>
+  <div class="teachers">
+    <div class="teacher reveal"><div class="av" style="background:#4f46e5">FN</div><h3>Fatima Noor</h3><p>Mathematics</p><small>MSc · 10 years</small></div>
+    <div class="teacher reveal"><div class="av" style="background:#f59e0b">DB</div><h3>David Brown</h3><p>English</p><small>MA · 8 years</small></div>
+    <div class="teacher reveal"><div class="av" style="background:#10b981">UK</div><h3>Usman Khalid</h3><p>Physics &amp; Chemistry</p><small>MPhil · 12 years</small></div>
+    <div class="teacher reveal"><div class="av" style="background:#ec4899">SP</div><h3>Sofia Perez</h3><p>Computer Science</p><small>BS CS · 6 years</small></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="head reveal">
+    <span class="eyebrow">Parents &amp; students</span>
+    <h2>What families say about us</h2>
+  </div>
+  <div class="quotes">
+    <figure class="quote reveal"><div class="stars" aria-label="5 stars">★★★★★</div><p>“My son's maths grade went from C to A in one term. The teachers really care and keep us updated.”</p><figcaption class="who"><i style="background:#4f46e5">R</i><div><b>Rabia S.</b><small>Parent, Grade 7</small></div></figcaption></figure>
+    <figure class="quote reveal"><div class="stars" aria-label="5 stars">★★★★★</div><p>“The mock exams and past papers made the board exams feel easy. I scored 94%!”</p><figcaption class="who"><i style="background:#10b981">J</i><div><b>James T.</b><small>Student, Grade 12</small></div></figcaption></figure>
+    <figure class="quote reveal"><div class="stars" aria-label="5 stars">★★★★★</div><p>“Small classes and a safe environment. My daughter loves going to the academy every day.”</p><figcaption class="who"><i style="background:#f59e0b">N</i><div><b>Nadia K.</b><small>Parent, Grade 3</small></div></figcaption></figure>
+  </div>
+</div></section>
+
+<section id="admission" style="padding-top:20px"><div class="wrap">
+  <div class="admit reveal">
+    <div>
+      <span class="eyebrow" style="color:var(--sun)">Admissions open</span>
+      <h2>Apply in 3 easy steps</h2>
+      <p class="lead">Fill in the form and our team will contact you on WhatsApp to book a free trial class.</p>
+      <ul class="steps">
+        <li><b>1</b>Send the admission form</li>
+        <li><b>2</b>Attend a free trial class</li>
+        <li><b>3</b>Confirm your seat and start learning</li>
+      </ul>
+    </div>
+    <form id="admitForm" novalidate>
+      <div class="field"><label for="student">Student name</label><input id="student" name="student" required maxlength="80" placeholder="Student's full name"></div>
+      <div class="field"><label for="parent">Parent name</label><input id="parent" name="parent" autocomplete="name" required maxlength="80" placeholder="Parent / guardian"></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+\-\s]{7,20}" placeholder="Your phone number"></div>
+      <div class="field"><label for="program">Program</label>
+        <select id="program" name="program" required>
+          <option value="">Choose a program</option>
+          <option>Primary Classes (1–5)</option><option>Middle School (6–8)</option><option>Board Exam Prep (9–12)</option>
+          <option>Spoken English</option><option>Computer &amp; Coding</option><option>Online Tuition</option>
+        </select></div>
+      <div class="field full"><label for="note">Message (optional)</label><textarea id="note" name="note" maxlength="500" placeholder="Current grade, preferred timing or any question"></textarea></div>
+      <button class="btn btn-primary" type="submit">Send admission form</button>
+      <p class="form-note" id="formNote" role="status" aria-live="polite">We only use your details to contact you about admission.</p>
+    </form>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:20px"><div class="wrap">
+  <div class="head reveal">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions parents ask</h2>
+  </div>
+  <div class="faq">
+    <details class="reveal"><summary>Is there a free trial class?</summary><p>Yes. Every new student can join one free trial class before taking admission.</p></details>
+    <details class="reveal"><summary>What are the class timings?</summary><p>Classes run Monday to Saturday between 2:00 PM and 8:00 PM. Weekend batches are also available.</p></details>
+    <details class="reveal"><summary>How will I know about my child's progress?</summary><p>You receive a monthly report with test results and teacher feedback, plus a parent-teacher meeting every term.</p></details>
+    <details class="reveal"><summary>Do you offer sibling discounts?</summary><p>Yes, the second child gets 10% off the monthly fee.</p></details>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:20px"><div class="wrap">
+  <div class="head reveal">
+    <span class="eyebrow">Contact</span>
+    <h2>Visit our campus</h2>
+  </div>
+  <div class="contact">
+    <div class="feat reveal"><div class="ic">📍</div><h3>Address</h3><p>45 Knowledge Road,<br>Model Town</p></div>
+    <div class="feat reveal"><div class="ic">📞</div><h3>Phone</h3><p><a href="tel:+10000000000">+1 (000) 000-0000</a><br>Mon – Sat, 10 AM – 8 PM</p></div>
+    <div class="feat reveal"><div class="ic">✉️</div><h3>Email</h3><p><a href="mailto:info@brightpath.example">info@brightpath.example</a><br>We reply within a day</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <div class="logo"><span class="logo-mark"><svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 14 8 26l24 12 24-12zM18 32v10c0 4 7 8 14 8s14-4 14-8V32l-14 7z" fill="#facc15"/></svg></span><span>BrightPath<small>ACADEMY</small></span></div>
+      <p>Helping students learn, grow and succeed since 2014.</p>
+    </div>
+    <div><h4>Programs</h4><ul><li><a href="#programs">School classes</a></li><li><a href="#programs">Exam prep</a></li><li><a href="#programs">English &amp; Computer</a></li></ul></div>
+    <div><h4>Academy</h4><ul><li><a href="#why">Why us</a></li><li><a href="#teachers">Teachers</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    <div><h4>Timings</h4><ul><li>Mon – Sat</li><li>2:00 PM – 8:00 PM</li><li>Weekend batches</li></ul></div>
+  </div>
+  <div class="copy">© <span id="year"></span> BrightPath Academy. Sample website.</div>
+</div></footer>
+
+<a class="wa" id="waBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.9 1 3.9.8a3.4 3.4 0 0 0 2.2-1.6 2.7 2.7 0 0 0 .2-1.6c-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+(() => {
+  // Academy's WhatsApp number in international format, digits only.
+  const WHATSAPP = "10000000000";
+  const wa = (text) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("waBtn").href = wa("Hello BrightPath Academy, I would like to know about admissions.");
+
+  // Mobile menu
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+  const setMenu = (open) => {
+    menu.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+  burger.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+  menu.addEventListener("click", (e) => e.target.closest("a") && setMenu(false));
+  document.addEventListener("keydown", (e) => e.key === "Escape" && setMenu(false));
+
+  // "Enroll" links pre-select the program in the admission form.
+  const program = document.getElementById("program");
+  document.querySelectorAll(".prog").forEach((card) => {
+    card.querySelector(".foot a").addEventListener("click", () => {
+      const name = card.querySelector("h3").textContent;
+      const option = [...program.options].find((o) => o.text.startsWith(name.split(" (")[0]));
+      if (option) program.value = option.value;
+    });
+  });
+
+  // Admission form: sends the details to the academy's WhatsApp.
+  const form = document.getElementById("admitForm");
+  const note = document.getElementById("formNote");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const invalid = [...form.elements].find((el) => el.willValidate && !el.checkValidity());
+    if (invalid) {
+      note.textContent = "Please fill in the student and parent names, a valid phone number and a program.";
+      note.style.color = "#dc2626";
+      invalid.focus();
+      return;
+    }
+    const d = Object.fromEntries(new FormData(form));
+    const message = [
+      "New admission enquiry",
+      `Student: ${d.student.trim()}`,
+      `Parent: ${d.parent.trim()}`,
+      `Phone: ${d.phone.trim()}`,
+      `Program: ${d.program}`,
+      d.note.trim() && `Message: ${d.note.trim()}`,
+    ].filter(Boolean).join("\n");
+    window.open(wa(message), "_blank", "noopener");
+    note.textContent = "Thank you! Please send the WhatsApp message and we will contact you soon.";
+    note.style.color = "#15803d";
+    form.reset();
+  });
+
+  // Fade sections in as they scroll into view.
+  const items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); }
+      }
+    }, { threshold: 0.12 });
+    items.forEach((el) => io.observe(el));
+  } else {
+    items.forEach((el) => el.classList.add("in"));
+  }
+})();
+</script>
+</body>
+</html>
